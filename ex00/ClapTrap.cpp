@@ -41,13 +41,24 @@ unsigned int	ClapTrap::getAttackPoint(void) const
 }
 /* getter*/
 
+/* function */
+void	ClapTrap::attack(const std::string& target)
+{
+	if (this->_energyPoint <= 0)
+		std::cout << this->_name << " is no EP !" << std::endl;
+	else
+	{
+		std::cout << GREEN <<
+			"ClapTrap " << this->_name <<  " attacks " << target <<
+			", causing" << this->_attackPoint << " points of damage! " <<
+			RESET << std::endl;
+		this->_energyPoint--;
+	}
+}
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hitPoint <= amount)
 		this->_hitPoint = 0;
 	this->_hitPoint -= amount;
-	std::cout << BLUE <<
-		this->_name << " takes " << amount << "damage" <<
-		RESET << std::endl;
 }
