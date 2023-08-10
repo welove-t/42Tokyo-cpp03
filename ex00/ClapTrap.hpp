@@ -12,9 +12,17 @@
 class ClapTrap
 {
 	private:
+		std::string		_name;
+		unsigned int	_hitPoint;
+		unsigned int	_EnergyPoint;
+		unsigned int	_attackPoint;
 
 	public:
+		ClapTrap(std::string name);
 
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
 
 #endif
