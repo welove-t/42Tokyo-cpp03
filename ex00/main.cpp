@@ -4,8 +4,9 @@ int main( void )
 {
 	std::cout << BLUE <<
 		"------------------------------------------" << std::endl <<
-		"               ClapTrap !" 				<< std::endl <<
-		"            pikachu vs pichu)" 			<< std::endl <<
+		"                 ClapTrap !" 				<< std::endl <<
+		std::endl <<
+		"             pikachu vs pichu" 			<< std::endl <<
 		"------------------------------------------" << std::endl <<
 	RESET << std::endl;
 
@@ -17,9 +18,24 @@ int main( void )
 	pikachu.setAttackPoint(8);
 	pichu.setAttackPoint(4);
 
-	std::cout << BLUE <<
-		"     pikachu -> pichu     " 				<< std::endl <<
-	RESET << std::endl;
+	// pikachu -> pichu
+	pikachu.attack("pichu");
+	pichu.takeDamage(pikachu.getAttackPoint());
+	pikachu.printStatus();
+	pichu.printStatus();
+
+	// pichu repaire
+	pichu.beRepaired(4);
+	pikachu.printStatus();
+	pichu.printStatus();
+
+	// pichu -> pikachu
+	pichu.attack("pikachu");
+	pikachu.takeDamage(pichu.getAttackPoint());
+	pikachu.printStatus();
+	pichu.printStatus();
+
+	// pikachu -> pichu
 	pikachu.attack("pichu");
 	pichu.takeDamage(pikachu.getAttackPoint());
 	pikachu.printStatus();
