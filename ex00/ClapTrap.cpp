@@ -50,7 +50,7 @@ void	ClapTrap::attack(const std::string& target)
 	{
 		std::cout << GREEN <<
 			"ClapTrap " << this->_name <<  " attacks " << target <<
-			", causing" << this->_attackPoint << " points of damage! " <<
+			", causing " << this->_attackPoint << " points of damage! " <<
 			RESET << std::endl;
 		this->_energyPoint--;
 	}
@@ -72,4 +72,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		_energyPoint--;
 		_hitPoint += amount;
 	}
+}
+
+void	ClapTrap::printStatus(void) const
+{
+	std::cout << YELLOW <<
+	"> " << _name << std::endl <<
+	"HP: " << _hitPoint << std::endl <<
+	"EP: " << _energyPoint << std::endl <<
+	"AP: " << _attackPoint << std::endl <<
+	RESET << std::endl;
 }
