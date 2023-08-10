@@ -44,33 +44,38 @@ unsigned int	ClapTrap::getAttackPoint(void) const
 /* function */
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->_energyPoint <= 0)
-		std::cout << this->_name << " is no EP !" << std::endl;
+	if (_energyPoint <= 0)
+		std::cout << _name << " is no EP !" << std::endl;
 	else
 	{
+		_energyPoint--;
 		std::cout << GREEN <<
-			"ClapTrap " << this->_name <<  " attacks " << target <<
-			", causing " << this->_attackPoint << " points of damage! " <<
+			"ClapTrap " << _name <<  " attacks " << target <<
+			", causing " << _attackPoint << " points of damage! " <<
 			RESET << std::endl;
-		this->_energyPoint--;
 	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hitPoint <= amount)
-		this->_hitPoint = 0;
-	this->_hitPoint -= amount;
+	if (_hitPoint <= amount)
+		_hitPoint = 0;
+	else
+		_hitPoint -= amount;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_energyPoint <= 0)
-		std::cout << this->_name << " is no EP !" << std::endl;
+		std::cout << _name << " is no EP !" << std::endl;
 	else
 	{
 		_energyPoint--;
 		_hitPoint += amount;
+		_energyPoint--;
+		std::cout << GREEN <<
+			"ClapTrap " << _name <<  " repaired "  << amount <<
+			RESET << std::endl;
 	}
 }
 
@@ -82,4 +87,8 @@ void	ClapTrap::printStatus(void) const
 	"EP: " << _energyPoint << std::endl <<
 	"AP: " << _attackPoint << std::endl <<
 	RESET << std::endl;
+	if (_hitPoint <= 0)
+		std::cout << RED <<
+			_name <<  " is dead " <<
+			RESET << std::endl;
 }
