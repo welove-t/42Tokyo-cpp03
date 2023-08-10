@@ -62,3 +62,14 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		this->_hitPoint = 0;
 	this->_hitPoint -= amount;
 }
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	if (_energyPoint <= 0)
+		std::cout << this->_name << " is no EP !" << std::endl;
+	else
+	{
+		_energyPoint--;
+		_hitPoint += amount;
+	}
+}
