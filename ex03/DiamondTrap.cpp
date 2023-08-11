@@ -14,3 +14,8 @@ DiamondTrap::~DiamondTrap()
 {
 	std::cout << "system message > DiamondTrap Destructor called" << std::endl;
 }
+
+void	DiamondTrap::whoAmI()
+{
+	std::cout << this->_name << " who am I ????" << std::endl;
+}
