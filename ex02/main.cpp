@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main( void )
 {
@@ -11,30 +12,23 @@ int main( void )
 		"------------------------------------------" << std::endl <<
 	RESET << std::endl;
 
-	ScavTrap pikachu("pikachu");
 	ClapTrap pichu("pichu");
+	ScavTrap pikachu("pikachu");
+	FragTrap raichu("raichu");
 
 	pikachu.guardGate();
-	pikachu.printStatus();
+	raichu.highFivesGuys();
 	pichu.printStatus();
+	pikachu.printStatus();
+	raichu.printStatus();
 	pichu.setAttackPoint(4);
 
-	// pichu -> pikachu
-	pichu.attack("pikachu");
-	pikachu.takeDamage(pichu.getAttackPoint());
-	pikachu.printStatus();
+	// raichu -> pichu
+	raichu.attack("pichu");
+	pichu.takeDamage(raichu.getAttackPoint());
 	pichu.printStatus();
-
-	// // pikachu repaire
-	pikachu.beRepaired(4);
 	pikachu.printStatus();
-	pichu.printStatus();
-
-	// // pikachu -> pichu
-	pikachu.attack("pichu");
-	pichu.takeDamage(pikachu.getAttackPoint());
-	pikachu.printStatus();
-	pichu.printStatus();
+	raichu.printStatus();
 
 	// // pikachu -> pichu
 	// pikachu.attack("pichu");
