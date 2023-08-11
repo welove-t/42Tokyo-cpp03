@@ -12,29 +12,29 @@ int main( void )
 	RESET << std::endl;
 
 	ScavTrap pikachu("pikachu");
-	// ClapTrap pichu("pichu");
+	ClapTrap pichu("pichu");
 
+	pikachu.guardGate();
 	pikachu.printStatus();
-	// pichu.printStatus();
-	// pikachu.setAttackPoint(8);
-	// pichu.setAttackPoint(4);
+	pichu.printStatus();
+	pichu.setAttackPoint(4);
+
+	// pichu -> pikachu
+	pichu.attack("pikachu");
+	pikachu.takeDamage(pichu.getAttackPoint());
+	pikachu.printStatus();
+	pichu.printStatus();
+
+	// // pikachu repaire
+	pikachu.beRepaired(4);
+	pikachu.printStatus();
+	pichu.printStatus();
 
 	// // pikachu -> pichu
-	// pikachu.attack("pichu");
-	// pichu.takeDamage(pikachu.getAttackPoint());
-	// pikachu.printStatus();
-	// pichu.printStatus();
-
-	// // pichu repaire
-	// pichu.beRepaired(4);
-	// pikachu.printStatus();
-	// pichu.printStatus();
-
-	// // pichu -> pikachu
-	// pichu.attack("pikachu");
-	// pikachu.takeDamage(pichu.getAttackPoint());
-	// pikachu.printStatus();
-	// pichu.printStatus();
+	pikachu.attack("pichu");
+	pichu.takeDamage(pikachu.getAttackPoint());
+	pikachu.printStatus();
+	pichu.printStatus();
 
 	// // pikachu -> pichu
 	// pikachu.attack("pichu");
