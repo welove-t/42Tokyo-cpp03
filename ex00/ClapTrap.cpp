@@ -2,9 +2,14 @@
 
 ClapTrap::ClapTrap(std::string name)
 : _name(name), _hitPoint(10), _energyPoint(10), _attackPoint(0)
-{}
+{
+	std::cout << "system message > ClapTrap Constructor called" << std::endl;
+}
 
-ClapTrap::~ClapTrap(){}
+ClapTrap::~ClapTrap()
+{
+	std::cout << "system message > ClapTrap Destructor called" << std::endl;
+}
 
 /* setter*/
 
