@@ -7,3 +7,8 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->setAttackPoint(20);
 	std::cout << "system message > ScavTrap Constructor called" << std::endl;
 }
+
+ScavTrap::~ScavTrap()
+{
+	std::cout << "system message > ScavTrap Destructor called" << std::endl;
+}

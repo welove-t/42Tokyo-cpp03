@@ -12,7 +12,6 @@ int main( void )
 	RESET << std::endl;
 
 	ScavTrap pikachu("pikachu");
-	// ClapTrap pikachu("pikachu");
 	// ClapTrap pichu("pichu");
 
 	pikachu.printStatus();
