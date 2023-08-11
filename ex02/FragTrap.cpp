@@ -12,3 +12,10 @@ FragTrap::~FragTrap()
 {
 	std::cout << "system message > FragTrap Destructor called" << std::endl;
 }
+
+void	FragTrap::highFivesGuys(void)
+{
+	std::cout << GREEN
+	<< this->getName() <<" high Fives Guys !"
+	<< RESET << std::endl;
+}
