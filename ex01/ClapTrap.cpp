@@ -30,6 +30,11 @@ void	ClapTrap::setAttackPoint(unsigned int amount)
 /* setter*/
 
 /* getter*/
+std::string		ClapTrap::getName(void)const
+{
+	return this->_name;
+}
+
 unsigned int	ClapTrap::getHitPoint(void) const
 {
 	return this->_hitPoint;
