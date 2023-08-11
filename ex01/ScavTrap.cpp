@@ -12,3 +12,17 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "system message > ScavTrap Destructor called" << std::endl;
 }
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->getEnergyPoint() <= 0)
+		std::cout << this->getName() << " is no EP !" << std::endl;
+	else
+	{
+		this->setEnergyPoint(this->getEnergyPoint() - 1);
+		std::cout << GREEN <<
+			"ScavTrap " << this->getName() <<  " attacks " << target <<
+			", causing " << this->getAttackPoint() << " points of damage! " <<
+			RESET << std::endl;
+	}
+}
