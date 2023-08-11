@@ -26,3 +26,10 @@ void	ScavTrap::attack(const std::string& target)
 			RESET << std::endl;
 	}
 }
+
+void	ScavTrap::guardGate()
+{
+	std::cout << GREEN
+		<< this->getName() <<" is Gate Keeper"
+		<< RESET << std::endl;
+}
