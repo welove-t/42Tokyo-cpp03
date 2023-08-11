@@ -5,7 +5,10 @@
 
 class ScavTrap : public ClapTrap
 {
-
+	private:
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
 };
 
 #endif
