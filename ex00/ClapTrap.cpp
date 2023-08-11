@@ -82,7 +82,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		_energyPoint--;
 		_hitPoint += amount;
-		_energyPoint--;
 		std::cout << GREEN <<
 			"ClapTrap " << _name <<  " repaired "  << amount <<
 			RESET << std::endl;
