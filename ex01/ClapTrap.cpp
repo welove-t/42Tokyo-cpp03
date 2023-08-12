@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 
+/* constractor */
 ClapTrap::ClapTrap(std::string name)
 : _name(name), _hitPoint(10), _energyPoint(10), _attackPoint(0)
 {
@@ -9,6 +10,24 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "system message > ClapTrap Destructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& rhs)
+: _name(rhs._name), _hitPoint(rhs._hitPoint), _energyPoint(rhs._energyPoint), _attackPoint(rhs._attackPoint)
+{
+	std::cout << "system message > ClapTrap Copy Constructor called" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
+{
+	if (this == &rhs)
+		return *this;
+	this->_name = rhs._name;
+	this->_hitPoint = rhs._hitPoint;
+	this->_energyPoint = rhs._energyPoint;
+	this->_attackPoint = rhs._attackPoint;
+	std::cout << "system message > ClapTrap Copy assignment operator called" << std::endl;
+	return *this;
 }
 
 /* setter*/

@@ -20,6 +20,10 @@ class ClapTrap
 	public:
 		ClapTrap(std::string name);
 		~ClapTrap();
+
+		ClapTrap(const ClapTrap& rhs);
+		ClapTrap& operator=(const ClapTrap& rhs);
+
 		void			setHitPoint(unsigned int amount);
 		void			setEnergyPoint(unsigned int amount);
 		void			setAttackPoint(unsigned int amount);
