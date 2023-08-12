@@ -1,7 +1,7 @@
 
 NAME		= main
 CXX 		= c++
-CXXFLAGS 	= -Wall -Werror -Wextra -std=c++98
+CXXFLAGS 	= -Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
 FILES		= main ClapTrap ScavTrap FragTrap DiamondTrap
 SRCS		= $(FILES:=.cpp)
 OBJS_DIR	= .objs
