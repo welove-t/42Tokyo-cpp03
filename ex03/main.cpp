@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main( void )
 {
@@ -15,20 +16,23 @@ int main( void )
 	ClapTrap pichu("pichu");
 	ScavTrap pikachu("pikachu");
 	FragTrap raichu("raichu");
+	DiamondTrap bugchu("bugchu");
 
 	pikachu.guardGate();
 	raichu.highFivesGuys();
 	pichu.printStatus();
 	pikachu.printStatus();
 	raichu.printStatus();
+	bugchu.printStatus();
 	pichu.setAttackPoint(4);
 
-	// raichu -> pichu
-	raichu.attack("pichu");
-	pichu.takeDamage(raichu.getAttackPoint());
+	// bugchu -> pichu
+	bugchu.attack("pichu");
+	pichu.takeDamage(bugchu.getAttackPoint());
 	pichu.printStatus();
 	pikachu.printStatus();
 	raichu.printStatus();
+	bugchu.printStatus();
 
 	// // pikachu -> pichu
 	// pikachu.attack("pichu");

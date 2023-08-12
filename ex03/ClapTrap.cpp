@@ -1,6 +1,8 @@
 #include "ClapTrap.hpp"
 
 /* constractor */
+ClapTrap::ClapTrap(){}
+
 ClapTrap::ClapTrap(std::string name)
 : _name(name), _hitPoint(10), _energyPoint(10), _attackPoint(0)
 {

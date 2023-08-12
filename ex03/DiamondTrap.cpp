@@ -1,9 +1,9 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
-	this->_name = name;
-	this->ClapTrap::_name = name + "_clap_name";
+	_name = name;
+	ClapTrap::_name = name + "_clap_name";
 	FragTrap::_hitPoint = 100;
 	ScavTrap::_energyPoint = 50;
 	FragTrap::_attackPoint = 30;
@@ -17,5 +17,5 @@ DiamondTrap::~DiamondTrap()
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << this->_name << " who am I ????" << std::endl;
+	std::cout << this->_name << "DiamondTrap who am I ????" << std::endl;
 }
