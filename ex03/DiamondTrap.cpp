@@ -17,5 +17,5 @@ DiamondTrap::~DiamondTrap()
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << this->_name << "DiamondTrap who am I ????" << std::endl;
+	std::cout << GREEN << this->_name << " DiamondTrap who am I ????" << RESET << std::endl;
 }

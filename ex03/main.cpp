@@ -20,6 +20,7 @@ int main( void )
 
 	pikachu.guardGate();
 	raichu.highFivesGuys();
+	bugchu.whoAmI();
 	pichu.printStatus();
 	pikachu.printStatus();
 	raichu.printStatus();
